@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LALA就是ME</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="cassielala.top/"/>
+  <updated>2019-01-16T08:38:02.657Z</updated>
+  <id>cassielala.top/</id>
+  
+  <author>
+    <name>Cassie LaLa</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="cassielala.top/2019/01/16/hello-world/"/>
+    <id>cassielala.top/2019/01/16/hello-world/</id>
+    <published>2019-01-16T08:37:53.000Z</published>
+    <updated>2019-01-16T08:38:02.657Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
