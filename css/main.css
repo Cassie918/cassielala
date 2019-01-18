@@ -1813,7 +1813,6 @@ pre .javascript .function {
   border-bottom: 0;
 }
 .my_post_copyright a:hover {
-  color: #a3d2a3;
   text-decoration: underline;
 }
 .my_post_copyright:hover .fa-clipboard {
@@ -2000,7 +1999,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4da1ba;
+  background: #cfdbec;
 }
 .links-of-blogroll {
   font-size: 13px;
