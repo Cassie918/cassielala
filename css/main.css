@@ -1999,7 +1999,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bdf042;
+  background: #d961d2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3345,6 +3345,7 @@ body {
   background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,0)), color-stop(0.1, rgba(0,0,0,0.3)));
   -webkit-box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
   -webkit-transform: translate(-50px, 10px) skew(10deg, 10deg) rotate(-50deg);
+  z-index: 1;
 }
 .post-block:after {
   content: '';
@@ -3357,6 +3358,7 @@ body {
   background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,0)), color-stop(0.1, rgba(0,0,0,0.3)));
   -webkit-box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
   -webkit-transform: translate(-50px, 10px) skew(10deg, 10deg) rotate(-50deg);
+  z-index: 1;
 }
 .footer {
   color: #fff;
@@ -3467,4 +3469,28 @@ a:hover {
 }
 .category-all-page .category-list-item:hover .category-list-link:before {
   color: #000;
+}
+#comments {
+  position: relative;
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), radial-gradient(91% 146%, rgba(255,255,255,0.5) 47%, rgba(0,0,0,0.5) 100%);
+  border: 1px solid #ccc;
+}
+#comments:before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 0.5em;
+  background: linear-gradient(135deg, transparent, transparent 45%, #a00, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, #a00, transparent 55%, transparent 100%);
+  background-size: 1em 1em;
+  background-repeat: repeat-x, repeat-x;
+}
+#comments:after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 0.5em;
+  background: linear-gradient(135deg, transparent, transparent 45%, #a00, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, #a00, transparent 55%, transparent 100%);
+  background-size: 1em 1em;
+  background-repeat: repeat-x, repeat-x;
+  bottom: 33px;
 }
