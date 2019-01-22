@@ -2000,7 +2000,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #94391d;
+  background: #ff5d26;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3480,7 +3480,6 @@ a:hover {
 }
 #comments {
   position: relative;
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), radial-gradient(91% 146%, rgba(255,255,255,0.5) 47%, rgba(0,0,0,0.5) 100%);
   border: 1px solid #ccc;
 }
 #comments:before {
@@ -3501,12 +3500,4 @@ a:hover {
   background-size: 1em 1em;
   background-repeat: repeat-x, repeat-x;
   bottom: 33px;
-}
-#container #guest input,
-#container .guest input {
-  padding: 8px 5px;
-  font-size: 12px;
-  border: none;
-  border-bottom: 1px solid #a00;
-  background: transparent;
 }
