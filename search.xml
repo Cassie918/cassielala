@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
+    <title><![CDATA[敢问施主因何而来]]></title>
     <url>%2F2019%2F01%2F16%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;个人习惯，来到一个新的地方总是喜欢先来个开篇，阐述一下因由。&emsp;&emsp;作为一个思绪如钢丝球的伪文艺女青年，我总能在某个奇怪的点在肚子里用仅有的墨水哗哗哗的长篇论述一番，并自我感觉异常良好，这篇淡墨水文或是段子，或是感思，或是记人，或是叙事，有时也可能仅是想描个景。每每这时我都特别的想发个朋友圈或是空间说说反馈我难以抑制的感觉，但又怕显得琐碎，矫情，于是默默地吞进肚子，然后被消化到淡忘。&emsp;&emsp;于是来此，畅叙一番，不为什么，就怕话痨的我被程序员的静默给憋出内伤，哈哈哈哈哈哈哈哈哈哈啊。&emsp;&emsp;首篇福利，给大家看一张我超爱的图片，超级cute！！！因而最后的结果被我截图制成了头像。]]></content>
+      <categories>
+        <category>文章</category>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>碎碎念</tag>
+      </tags>
   </entry>
 </search>
