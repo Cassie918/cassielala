@@ -2000,7 +2000,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #88baba;
+  background: #2bcd6e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3466,7 +3466,7 @@ a:hover {
   position: absolute;
   margin-left: -25px;
   margin-top: 3px;
-  color: #ef0d0d;
+  color: #000;
   content: "\f1e2";
   font: normal normal normal 20px/1 FontAwesome;
   -webkit-transition: all 0.2s ease-out;
@@ -3476,7 +3476,7 @@ a:hover {
   transition: all 0.2s ease-out;
 }
 .category-all-page .category-list-item:hover .category-list-link:before {
-  color: #000;
+  color: #ef0d0d;
 }
 #comments {
   position: relative;
@@ -3500,4 +3500,9 @@ a:hover {
   background-size: 1em 1em;
   background-repeat: repeat-x, repeat-x;
   bottom: 33px;
+}
+.post-block table {
+  border-width: 3px;
+  background: #fff;
+  margin: 20px auto;
 }
