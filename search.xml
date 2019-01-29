@@ -15,12 +15,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ag-Grid 超丰富的表格插件]]></title>
+    <title><![CDATA[ag-Grid 超丰富的表格插件（1）——简易使用]]></title>
     <url>%2F2019%2F01%2F28%2Fag-Grid-%E8%B6%85%E4%B8%B0%E5%AF%8C%E7%9A%84%E8%A1%A8%E6%A0%BC%E6%8F%92%E4%BB%B6%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[由于最近一直接触的ag-Grid，但是网上的博文却很少见，有些困惑想搜索却找不到答案，不晓得为什嘛，所以想写一些常见的功能介绍，也能和大家一起探讨一下。作为经历过手写table表格的我，ag-Grid带给我的感受简直不要不要的，感觉是一款功能超级丰富表格插件，因为没用过其他什么table表格插件，所以不能说它是最好用的。说不上如何深挖，请叫我亲爱的的翻译官吧，毕竟翻墙是一种痛，每次一个网页加载出来，都不舍得刷新重新了O(∩_∩)O哈哈~。ag-Grid官方文档上有详细的属性、方法说明介绍，且配有案例和代码以及在线编辑功能，十分强大。想看官方网站原址可点击这里查看哦。好吧，接下来让我们看看这个神奇的ag-Grid。 基本使用安装ag-Grid有两种版本，一个是community，还有一个是企业级的enterprise版本，并不知道干嘛的，我们直接安装ag-Grid就好了。 NPM安装ag-Grid：123$ npm install --save ag-grid``` `community`、`enterprise`： npm install –save ag-grid-communitynpm install –save ag-grid-enterprise1234567#### 本地下载 可点击[这里](https://github.com/ag-grid/ag-grid/tree/master/packages/ag-grid-community)下载源文件直接本地使用 #### 头文件引入```js&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.6.3/css/all.css&quot;/&gt;&lt;script src=&quot;https://unpkg.com/ag-grid-community@20.0.0/dist/ag-grid-community.min.js&quot;&gt;&lt;/script&gt; 引入1、首先，在HTML里添加表格插入的div容器1&lt;div id="myGrid" style="height: 150px;width: 600px" class="ag-theme-balham"&gt;&lt;/div&gt; 2、头文件引入表格文件和样式文件123import &#123;Grid&#125; from "ag-grid/main";import "ag-grid/dist/styles/ag-grid.css";import "ag-grid/dist/styles/ag-theme-balham.css"; 3、配置表格列和行数据123456789101112const gridOptions = &#123; columnDefs: [ &#123;headerName: 'Make', field: 'make'&#125;, &#123;headerName: 'Model', field: 'model'&#125;, &#123;headerName: 'Price', field: 'price'&#125; ], rowData: [ &#123;make: 'Toyota', model: 'Celica', price: 35000&#125;, &#123;make: 'Ford', model: 'Mondeo', price: 32000&#125;, &#123;make: 'Porsche', model: 'Boxter', price: 72000&#125; ]&#125;; 4、初始化表格12let eGridDiv = document.querySelector('#myGrid');new Grid(eGridDiv, this.gridOptions); 5、大功告成！然后可得到如下表格]]></content>
       <categories>
         <category>Front-End Learning</category>
-        <category>好用的插件</category>
+        <category>Else</category>
       </categories>
       <tags>
         <tag>Front-End Learning</tag>
