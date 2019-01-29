@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[markdown语法小记]]></title>
+    <url>%2F2019%2F01%2F29%2Fmarkdown%E8%AF%AD%E6%B3%95%E5%B0%8F%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[基本语法标题h1~h6对应： #数量决定标题等级。还可以用=在文字下表示，但局限只有两级。12345678910# h1## h2### h3#### h4##### h5###### h6 一级标题===二级标题--- 显示如下： 引用12&gt; 引用的文字&gt;&gt; 引用的文字 大于号越多，引用的层级越多，上述代码显示效果如下： 引用的文字 引用的文字 链接或图片12[点击跳转至百度](http://www.baidu.com)![图片](http://cassielala.top/images/logo.jpg) 显示效果如下：点击跳转至百度&nbsp;&nbsp; hexo插入本地图片使用hexo的时候因为要插入本地图片遇到了问题，特此写来记录，希望能够帮助到大家。 首先将hexo把主页的配置文件_config.yml 里的post_asset_folder:这个选项设置为true hexo目录下执行npm install hexo-asset-image --save 完成后再new新的md文件的时候就能在/source/_posts下找到同名文件夹，将要放的图片丢进去对应的文件夹。 md文件中引入的时候使用![xxx](xxx/xxx.png)即可 本来到这里应该就万事大吉了，但是嘞，我的图片依旧无法显示，后来经过我一系列的搜索，终于找到了问题的解决方案。问题：图片依然无法显示的原因是hexo3版本更新后对很多插件支持有问题，hexo-asset-image插件在处理data.permalink链接时出现路径错误，把年月去掉了，导致最后生成的路径为%d/xxx/xxx。做法： 找到插件hexo-asset-image,通过判断当前版本是否等于3的版本做不同的路径分割，一般插件在/node_modules/目录下。 修改代码如下： 12345678//可在方法上添加该变量var version = String(hexo.version).split('.');//修改“data.permalink”var link = data.permalink; if(version.length &gt; 0 &amp;&amp; Number(version[0]) == 3) var beginPos = getPosition(link, '/', 1) + 1; else var beginPos = getPosition(link, '/', 3) + 1; md文件使用时直接写照片名即可。 修改完成保存，重新生成静态文件即可：![xxx](xxx.png)。 列表 无序列表使用*、+、-标识 有序列表使用数字加.标识，例如：1. 可嵌套使用，回车+tab即可 1234567891011121314151617181920212223* 黄瓜* 玉米* 茄子+ 黄瓜+ 玉米+ 茄子- 黄瓜- 玉米- 茄子1. 黄瓜2. 玉米3. 茄子- 黄瓜 - 水果黄瓜 - 小黄瓜- 玉米 - 紫玉米 - 黄玉米- 茄子 效果如下： 黄瓜 玉米 茄子 黄瓜 玉米 茄子 黄瓜 水果黄瓜 小黄瓜 玉米 紫玉米 黄玉米 茄子 注： 如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格。 如果在列表中加入了区块引用，区域引用标记符也需要缩进4个空格 反正记住一个原则，如果在和列表配合使用的时候出现了问题，就缩进一次，四个空格或者一个制表符代表一次缩进。如果一次缩进没有解决问题，那就两次。 分割线使用*或-即可12***--- 效果如下： 强调12345*这里是斜体*_这里是斜体_**这里是加粗**__这里是加粗__ 效果如下：这里是斜体这里是斜体这里是加粗这里是加粗 插入代码块使用两排的“1234```\```javaXXXXXX```\ 插入表格其中第一行表头，第二行定义排列方式，:居--坐边即左对齐，居右则右对齐，两边都有则居中。123表头|条目一|条目二:---:|:---:|:---:项目|项目一|项目二 效果如下： 表头 条目一 条目二 项目 项目一 项目二 符号处理转译多加一个/123456789101112\ 反斜线` 反引号* 星号_ 底线&#123;&#125; 花括号[] 方括号() 括弧# 井字号+ 加号- 减号. 英文句点! 惊叹号 支持高亮语言 名称 关键字 名称 关键字 AppleScript applescript ActionScript 3.0 actionscript3, as3 Shell bash , shell ColdFusion coldfusion,cf C cpp , c C# c# , c-sharp , csharp CSS css Delphi delphi , pascal , pas diff&amp;patch diff patch Erlang erl , erlang Groovy groovy Java java JavaFX jfx , javafx JavaScript js , jscript , javascript Perl perl , pl , Perl PHP php text text , plain Python py , python Ruby ruby , rails , ror , rb SASS&amp;SCSS sass , scss Scala scala SQL sql Visual Basic vb , vbnet XML xml , xhtml , xslt , html Objective C objc , obj-c F# f# f-sharp , fsharp xpp , dynamics-xpp R r , s , splus matlab matlab swift swift GO go , golang 大致介绍就到这里啦，如果有什么新的发现，我会继续更新哒！]]></content>
+      <categories>
+        <category>Front-End Learning</category>
+        <category>Else</category>
+      </categories>
+      <tags>
+        <tag>Front-End Learning</tag>
+        <tag>Else</tag>
+        <tag>markDown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ag-Grid 超丰富的表格插件]]></title>
+    <url>%2F2019%2F01%2F28%2Fag-Grid-%E8%B6%85%E4%B8%B0%E5%AF%8C%E7%9A%84%E8%A1%A8%E6%A0%BC%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Front-End Learning</category>
+        <category>好用的插件</category>
+      </categories>
+      <tags>
+        <tag>Front-End Learning</tag>
+        <tag>好用的插件</tag>
+        <tag>ag-Grid</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CSS counter属性]]></title>
     <url>%2F2019%2F01%2F28%2Fcss%2F</url>
     <content type="text"><![CDATA[前言 本文引用张鑫旭大大博客文章《CSS counter计数器(content目录序号自动递增)详解》，一直觉得鑫大大是个被程序员耽误的小说家，他的文章风格大都以浅明深，诙谐幽默，可点击这里查看原文哦。 好了，It’s my show time!在了解到counter之前，想到计数应该属ul，ol标签元素了吧，但它们的递增规则单一，无法实现自定义的递增。而counter属性完美的解决了这个问题，让我们一起来看看吧。首先，使用一个属性前，我们一定得了解一下它的兼容性，曾经被IE兼容性虐哭的我，不得不小心作为一个好用属性的兼容问题。 兼容性 &nbsp;I&nbsp;E&nbsp;&nbsp; Firefox Chrome Safari Opera iOS Safari Android Browser Android Chrome 8.0+ 2.0+ 4.0+ 3.1+ 3.5+ 3.2+ 2.1+ 18.0+ &emsp;&emsp;看到这里是不是心里放松了很多，它的兼容性还是可以的接受的，范围不算局限。 counter的使用题要 CSS计数器只能跟content属性在一起的时候才有作用，而content属性貌似专门用在before/after伪元素上的。于是，就有了，“计数器↔伪元素↔content属性”的铁三角关系 counter成员counter的成员主要有三个： counter-reset（计数器声明及初始值设置） counter-increment（递增规则） counter()/counters(计算结果生成) counter-resetcounter-reset主要有三个属性。 none：默认。不能对选择器的计数器进行重置。 name num：name即标记计数器名称，num即记录计数器初始值。num非必写，默认为0。 inherit：规定应该从父元素继承 counter-reset 属性的值。 counter-incrementcounter-increment主要有三个属性。 none：没有计数器将递增。 name num：name即选择递增的计数器，num即增量。num非必写，默认为1，可以是正数、零或者负数。 inherit：指定counter-increment属性的值，应该从父元素继承。 counter()/counters()这是个方法，不是属性。类似CSS3中才calc()计算。 name：选择递增的计数器。 style：递增的数字样式：阿拉伯数字，罗马数字等，具体如下： list-style-type：disc | circle | square | decimal | lower-roman | upper-roman | lower-alpha | upper-alpha | none | armenian | cjk-ideographic | georgian | lower-greek | hebrew | hiragana | hiragana-iroha | katakana | katakana-iroha | lower-latin | upper-latin string：counters的属性，子序数连接符 注：多个计数器还可同时命名，接下来我们上代码看几个例子。 123456789101112131415161718192021222324252627282930CSS：1. counter-reset属性.xxx &#123; counter-reset: count; /* 计数器名称是'count', 并且默认起始值为0 */&#125; .xxx &#123; counter-reset: count 4; /* 计数器名称是'count', 并且默认起始值为4 */&#125; .xxx &#123; counter-reset: count1 2 count2 3; /* 定义两个计数器'count1'和'count2',默认起始值分别为2和3 */&#125; 2. counter-increment属性.counter &#123; counter-increment: count 2; /*'count'以2阶段递增 */&#125;.counter &#123; counter-increment: count -1; /*'count'以1阶段递减 */&#125;3. counter方法counters(name, style);.counter:before &#123; content: counter(count1) '\A' counter(count2); /*'\A'使用inline水平元素换行*/ white-space: pre; &#125; &emsp;&emsp;接下来看一个完整的例子。效果如图：12345678910111213141516171819202122232425262728293031323334353637383940414243444546&lt;div class="box"&gt; &lt;div class="list"&gt;一级标题 &lt;div class="box"&gt; &lt;div class="list"&gt;二级标题&lt;/div&gt; &lt;div class="list"&gt;二级标题&lt;/div&gt; &lt;div class="list"&gt;二级标题&lt;/div&gt; &lt;/div&gt; &lt;div class="box"&gt; &lt;div class="list"&gt;二级标题 &lt;div class="box"&gt; &lt;div class="list"&gt;三级标题&lt;/div&gt; &lt;div class="list"&gt;三级标题&lt;/div&gt; &lt;div class="list"&gt;三级标题&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class="box"&gt;&lt;/div&gt; &lt;/div&gt; &lt;div&gt; &lt;div class="list"&gt;一级标题&lt;div&gt;&lt;/div&gt;&lt;style&gt;.box &#123; counter-reset: counter; &#125;.toper, .inner &#123; background-color: #eee; margin-left: 20px; &#125;.list:before, .toper:before,.inner:before &#123; counter-increment: counter; &#125;.list &#123; padding-left: 20px;&#125;.inner:before, .list:before, .toper:before &#123; content: counters(counter,'.')'、';&#125;&lt;/style&gt; OK~至此，关于counter的介绍就差不多结束了，可以在实践过程中发现和挖掘更有意思的操作，如果你有什么有趣的神操作，可以给我留言分享哦！啦啦啦~]]></content>
