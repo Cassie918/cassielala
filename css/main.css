@@ -2000,7 +2000,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f6eb81;
+  background: #b957ee;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3369,7 +3369,8 @@ body {
   z-index: 1;
 }
 .footer {
-  color: #fff;
+  color: #333;
+  font-weight: bold;
 }
 #rewardButton span {
   background: #a00;

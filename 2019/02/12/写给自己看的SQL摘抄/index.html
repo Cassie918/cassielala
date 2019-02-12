@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Front-End Learning,ag-Grid,DataBase,">
+  <meta name="keywords" content="Front-End Learning,DataBase,">
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="本文来源于廖雪峰的SQL教程，由于是写给自己看的知识点汇总，所以简单的介绍类文字可能就不介绍了，直接上干货。点击这里可查看廖雪峰教程原址。  关系模型主键 概念：指能够唯一区分出不同记录的字段称之为主键。 主键选取原则：不使用任何业务相关的字段作为主键。主键：身份证号、手机号、邮箱地址（X）主键：自增整数类型id（√）因为主键是用来唯一定位记录的，修改了主键，会造成一系列的影响，假设以身份证号为">
-<meta name="keywords" content="Front-End Learning,ag-Grid,DataBase">
+<meta name="keywords" content="Front-End Learning,DataBase">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写给自己看的SQL摘抄">
 <meta property="og:url" content="cassielala.top/2019/02/12/写给自己看的SQL摘抄/index.html">
@@ -91,7 +91,7 @@
 <meta property="og:image" content="/2019/02/12/写给自己看的SQL摘抄/2.png">
 <meta property="og:image" content="/2019/02/12/写给自己看的SQL摘抄/3.png">
 <meta property="og:image" content="/2019/02/12/写给自己看的SQL摘抄/4.png">
-<meta property="og:updated_time" content="2019-02-12T09:14:52.518Z">
+<meta property="og:updated_time" content="2019-02-12T09:20:11.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="写给自己看的SQL摘抄">
 <meta name="twitter:description" content="本文来源于廖雪峰的SQL教程，由于是写给自己看的知识点汇总，所以简单的介绍类文字可能就不介绍了，直接上干货。点击这里可查看廖雪峰教程原址。  关系模型主键 概念：指能够唯一区分出不同记录的字段称之为主键。 主键选取原则：不使用任何业务相关的字段作为主键。主键：身份证号、手机号、邮箱地址（X）主键：自增整数类型id（√）因为主键是用来唯一定位记录的，修改了主键，会造成一系列的影响，假设以身份证号为">
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-12T04:13:34-05:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-12T04:13:00-05:00">
                 2019-02-12
               </time>
             
@@ -628,7 +628,11 @@
 <li>MIN    计算某一列的最小值，不限于数值类型  </li>
 </ul>
 <p><code>注:</code>如果聚合查询的<code>WHERE</code>条件没有匹配到任何行，<code>COUNT()</code>会返回0，而<code>MAX()</code>、<code>MIN()</code>、<code>MAX()</code>和<code>MIN()</code>会返回<code>NULL</code>：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 查询students表一共有多少条记录,返回结果仍然是一个二维表，只是这个二维表只有一行一列，并且列名是COUNT(*) */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使用聚合查询并设置结果集的列名为num */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">num</span> <span class="keyword">FROM</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 统计男生人数 */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) boys <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> gender = <span class="string">'M'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 计算男生平均成绩 */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(score) average <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> gender = <span class="string">'M'</span>;</span><br><span class="line">```  </span><br><span class="line">- GROUP BY：分组聚合</span><br><span class="line"></span><br><span class="line">```SQL</span><br><span class="line"><span class="comment">/* 统计每个班人数 */</span></span><br><span class="line"><span class="keyword">SELECT</span> class_id, <span class="keyword">COUNT</span>(*) <span class="keyword">num</span> <span class="keyword">FROM</span> students <span class="keyword">GROUP</span> <span class="keyword">BY</span> class_id;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 查询students表一共有多少条记录,返回结果仍然是一个二维表，只是这个二维表只有一行一列，并且列名是COUNT(*) */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 使用聚合查询并设置结果集的列名为num */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">num</span> <span class="keyword">FROM</span> students;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 统计男生人数 */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) boys <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> gender = <span class="string">'M'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 计算男生平均成绩 */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">AVG</span>(score) average <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> gender = <span class="string">'M'</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>GROUP BY：分组聚合  </li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 统计每个班人数 */</span></span><br><span class="line"><span class="keyword">SELECT</span> class_id, <span class="keyword">COUNT</span>(*) <span class="keyword">num</span> <span class="keyword">FROM</span> students <span class="keyword">GROUP</span> <span class="keyword">BY</span> class_id;</span><br></pre></td></tr></table></figure>
 <p>结果集如下：</p>
 <table>
 <thead>
@@ -748,7 +752,7 @@
   <p><span>本文标题:</span><a href="/2019/02/12/写给自己看的SQL摘抄/">写给自己看的SQL摘抄</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Cassie LaLa 的个人博客">Cassie LaLa</a></p>
   <p><span>发布时间:</span>2019年02月12日 - 04:13</p>
-  <p><span>最后更新:</span>2019年02月12日 - 04:14</p>
+  <p><span>最后更新:</span>2019年02月12日 - 04:20</p>
   <p><span>原始链接:</span><a href="/2019/02/12/写给自己看的SQL摘抄/" title="写给自己看的SQL摘抄">cassielala.top/2019/02/12/写给自己看的SQL摘抄/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="cassielala.top/2019/02/12/写给自己看的SQL摘抄/" aria-label="复制成功！"></i></span>
   </p>
@@ -809,8 +813,6 @@
         <div class="post-tags">
           
             <a href="/tags/Front-End-Learning/" rel="tag"><i class="fa fa-tag"></i> Front-End Learning</a>
-          
-            <a href="/tags/ag-Grid/" rel="tag"><i class="fa fa-tag"></i> ag-Grid</a>
           
             <a href="/tags/DataBase/" rel="tag"><i class="fa fa-tag"></i> DataBase</a>
           
